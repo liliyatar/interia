@@ -36,7 +36,7 @@ import * as flsFunctions from "./files/functions.js";
 /* Додавання loaded для HTML після повного завантаження сторінки */
 // flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
@@ -45,7 +45,7 @@ import * as flsFunctions from "./files/functions.js";
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -109,21 +109,21 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
-*/
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль роботи з select. */
 // import './libs/select.js'
@@ -244,7 +244,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 /* Динамічний адаптив */
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 // ========================================================================================================================================================================================================================================================
 // Інше ========================================================================================================================================================================================================================================================

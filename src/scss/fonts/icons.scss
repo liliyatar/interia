@@ -13,3 +13,22 @@
 		@extend %ic;
 	}
 }
+
+._icon-twitter:before {
+  content: "\e900";
+}
+._icon-linkedIn:before {
+  content: "\e901";
+}
+._icon-instagram:before {
+  content: "\e902";
+}
+._icon-arrow:before {
+  content: "\e903";
+}
+._icon-play:before {
+  content: "\e904";
+}
+._icon-facebook:before {
+  content: "\e905";
+}

@@ -1,1 +1,39 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.title {
+	// .title__label
+	&__label {
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0.43em;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .title__value
+	&__value {
+		font-size: toRem(40);
+		color: $whiteColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+}
+
+.btn {
+	font-family: "Kanit";
+	border: toRem(1) solid $mainColor;
+	border-radius: toRem(100);
+	@include adaptiveValue("letter-spacing", 5, 1);
+	padding: toRem(7) toRem(31) toRem(8) toRem(32);
+	color: $whiteColor;
+	text-transform: uppercase;
+	transition: all 0.8s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			cursor: pointer;
+			color: $whiteColor;
+			background-color: #68c896;
+			border: 1px solid #68c896;
+		}
+	}
+}

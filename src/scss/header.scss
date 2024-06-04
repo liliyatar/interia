@@ -1,0 +1,118 @@
+.header {
+	color: $whiteColor;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	font-family: "Nunito";
+	background-color: #191d1d97;
+	// .header__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 52, 15);
+		@include adaptiveValue("padding-top", 35, 25);
+		@include adaptiveValue("padding-bottom", 35, 25);
+	}
+
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		transition: all 0.8s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	// .header__menu
+	&__menu {
+		margin-left: auto;
+	}
+
+	// .header__actions
+	&__actions {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .header__button
+	&__button {
+	}
+}
+.menu {
+	// .menu__body
+	&__body {
+		@media (max-width: $mobile) {
+			display: grid;
+			grid-template-rows: 1fr auto;
+			gap: toRem(30);
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			background-color: $bgColor;
+			transition: left 0.3s;
+			padding: toRem(120) toRem(15) toRem(30) toRem(15);
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 155, 70);
+				top: 0;
+				left: -100%;
+				z-index: 2;
+				transition: left 0.3s;
+				background-color: $bgColor;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(3);
+		@include adaptiveValue("column-gap", 55, 30, 0, $containerWidth, 767.98);
+		align-items: center;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: toRem(20);
+		}
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		transition: color 0.8s ease 0s;
+		text-transform: capitalize;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #68c896;
+			}
+		}
+		@media (max-width: $mobile) {
+			row-gap: toRem(30);
+			font-size: toRem(28);
+		}
+	}
+}
